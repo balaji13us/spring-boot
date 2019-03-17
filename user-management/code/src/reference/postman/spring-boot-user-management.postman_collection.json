@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "8d4c3754-92f2-4efe-8649-bf4d3907fc07",
+		"name": "spring-boot-user-management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Fetch ALL Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/usermanagement/rest/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usermanagement",
+								"rest",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch One User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/usermanagement/rest/user/10001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usermanagement",
+								"rest",
+								"user",
+								"10001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 10004,\n    \"proxy\": \"10003\",\n    \"title\": \"Ms.\",\n    \"firstName\": \"SARA\",\n    \"lastName\": \"FOX\",\n    \"fullName\": \"SARA FOX\",\n    \"email\": \"SARA.FOX.ABC.COM\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/usermanagement/rest/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usermanagement",
+								"rest",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"proxy\": \"10003\",\n    \"title\": \"Ms.\",\n    \"firstName\": \"SARA\",\n    \"lastName\": \"FOX\",\n    \"fullName\": \"SARA FOX\",\n    \"email\": \"SARA.FOX.ABC.COM\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/usermanagement/rest/user/10002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usermanagement",
+								"rest",
+								"user",
+								"10002"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
