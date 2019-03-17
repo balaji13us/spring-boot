@@ -28,7 +28,6 @@
 .settings
 .project
 /target
-/target/
 /eclipse-workspace
 
 
