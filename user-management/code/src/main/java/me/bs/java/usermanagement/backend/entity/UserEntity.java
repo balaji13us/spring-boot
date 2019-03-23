@@ -1,4 +1,4 @@
-package me.bs.java.spring.springboot.usermanagement.backend.entity;
+package me.bs.java.usermanagement.backend.entity;
 
 import java.io.Serializable;
 

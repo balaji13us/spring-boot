@@ -1,4 +1,4 @@
-package me.bs.java.spring.springboot.usermanagement.frontend.rest.controller;
+package me.bs.java.usermanagement.frontend.rest.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
