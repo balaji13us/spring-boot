@@ -1,3 +1,4 @@
+
 # User Management Application
 Application Frameworks Implementation:
  - [ ] Multiple Database Implementation
@@ -24,7 +25,7 @@ Application Frameworks Implementation:
 	 - [x] Request Attributes
 	 - [ ] Response Payload Logs
 	 - [x]  All Exception Logs
-  - [ ] Transaction Management 
+ - [ ] Transaction Management 
  - [ ] TDD
 	 - [ ] Junit Test Cases 
 	 - [ ] Code Coverage Code
@@ -36,5 +37,5 @@ Application Frameworks Implementation:
 
 
  **References:**
- Swagger UI: https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api
- Readme.me Editor: https://stackedit.io/app#
+ - Swagger UI: https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api
+ - Readme.me Editor: https://stackedit.io/app#
