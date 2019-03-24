@@ -13,11 +13,12 @@ import me.bs.java.usermanagement.backend.repository.UserRepository;
 public class UserService {
 	@Autowired
 	UserRepository userRepository;
-	
-	public void deleteById(Long id) {
+
+	public void deleteById(Long id) throws IDNotFoundException {
+		findById(id);
 		userRepository.deleteById(id);
 	}
-	
+
 	public Iterable<UserEntity> findAll() {
 		// TODO Auto-generated method stub
 		return userRepository.findAll();
@@ -25,25 +26,26 @@ public class UserService {
 
 	public Optional<UserEntity> findById(Long id) throws IDNotFoundException {
 		// TODO Auto-generated method stub
-		 Optional<UserEntity> userEntity = userRepository.findById(id);
-		 if(null==userEntity || !userEntity.isPresent()) {
+		Optional<UserEntity> userEntity = userRepository.findById(id);
+		if (null == userEntity || !userEntity.isPresent()) {
 			// System.out.println("ID not found");
-			 throw new IDNotFoundException("USER_ID_NOT_FOUND");
-		 }else 
-		 {
-			 //System.out.println("ID found "+ userEntity);
-		 }
-		
-		
+			throw new IDNotFoundException("USER_ID_NOT_FOUND");
+		} else {
+			// System.out.println("ID found "+ userEntity);
+		}
+
 		return userEntity;
 	}
 
-	public UserEntity save(UserEntity userEntity) {
-		
+	public UserEntity save(UserEntity userEntity) throws IDNotFoundException {
+		if (userEntity != null) {
+			if (userEntity.getId() != null) {
+				findById(userEntity.getId());
+			}
+
+		}
+
 		return userRepository.save(userEntity);
 	}
 
-	
-	
-	
 }

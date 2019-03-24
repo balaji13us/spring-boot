@@ -39,3 +39,21 @@ Application Frameworks Implementation:
  **References:**
  - Swagger UI: https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api
  - Readme.me Editor: https://stackedit.io/app#
+	
+	http://localhost:8080/usermanagement/
+	http://localhost:8080/usermanagement/h2-console
+	http://localhost:8080/usermanagement/AddressRepository
+	http://localhost:8080/usermanagement/swagger-ui.html
+	
+	Spring Data Rest endpoints
+	HIbernate on-Many
+	https://www.baeldung.com/spring-data-rest-intro
+	https://www.baeldung.com/spring-data-rest-relationships
+	https://docs.spring.io/spring-data/rest/docs/current/reference/html/#_the_hal_browser
+	
+	Changes History
+	24-March-2019
+	Added Address and Phone Entity
+	Added Spring Data Rest Repository 
+	Added OneToMany Relationship for User, Address and Phone
+	Updated User Response Entity

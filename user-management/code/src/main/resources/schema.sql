@@ -1,3 +1,4 @@
+/*
 create table student1
 (
    id integer not null,
@@ -19,3 +20,14 @@ create table USER
    
    primary key(ID)
 );
+
+CREATE TABLE PHONE 
+(
+	ID BIGINT NOT NULL, 
+	NUMBER VARCHAR(255),
+	PRIMARY VARCHAR(255), 
+	PROXY VARCHAR(255), 
+	TYPE VARCHAR(255), 
+	PRIMARY KEY (PHONE_ID)
+) ;
+*/

@@ -48,20 +48,23 @@ public class UserRestController {
 		return  response;
 	}
 	@RequestMapping(path="/", method=RequestMethod.POST)
-	public ResponseEntity<Object> createUser(@RequestBody  UserEntity userEntity) {
+	public ResponseEntity<Object> createUser(@RequestBody  UserEntity userEntity) throws IDNotFoundException {
 		UserEntity createdUserEntity = userService.save(userEntity);
 		
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
 				.buildAndExpand(createdUserEntity.getId()).toUri();
-
-		return ResponseEntity.created(location).build();
+		new ResponseEntity<>(createdUserEntity,HttpStatus.OK);
+		//return ResponseEntity.created(location).build();
+		return ResponseEntity.created(location).body(createdUserEntity);
 		
 	}
 	
 	@RequestMapping(path="/{id}", method=RequestMethod.PUT)
-	public UserEntity updateUser(@RequestBody  UserEntity userEntity) {
-		
-		return userService.save(userEntity);
+	public ResponseEntity<Object> updateUser(@RequestBody  UserEntity userEntity) throws IDNotFoundException {
+		UserEntity updatedUserEntity = userService.save(userEntity);
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
+				.buildAndExpand(updatedUserEntity.getId()).toUri();
+		return ResponseEntity.ok(updatedUserEntity);
 	}
 	
 }
