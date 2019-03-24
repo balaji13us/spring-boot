@@ -27,7 +27,7 @@ public class UserRestController {
 	UserService userService;
 	
 	@RequestMapping(path="/{id}", method=RequestMethod.DELETE)
-	public void deleteUserById(@PathVariable("id") Long id) {
+	public void deleteUserById(@PathVariable("id") Long id) throws IDNotFoundException {
 		userService.deleteById(id);
 	}
 	//@Loggable
